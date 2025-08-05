@@ -1,0 +1,88 @@
+:root {
+    --primary-color: #005A9C; /* Um azul profissional */
+    --secondary-color: #F7F9FC;
+    --text-color: #333;
+    --background-color: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--background-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px var(--shadow-color);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    overflow: hidden;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.step {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.step.active {
+    display: block;
+    opacity: 1;
+}
+
+h2 {
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.unit-button, button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.unit-button:hover, button[type="submit"]:hover {
+    background-color: #004170; /* Tom mais escuro do azul */
+    transform: translateY(-2px);
+}
+
+#name-field {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#success-message h2 {
+    color: #28a745; /* Verde para sucesso */
+}

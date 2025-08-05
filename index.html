@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuito de Profissões 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Circuito de Profissões 2025</h1>
+        </header>
+
+        <main id="main-content">
+            <div id="unit-selection" class="step active">
+                <h2>Para começar, selecione a sua unidade:</h2>
+                <div class="button-group">
+                    <button id="liceu-btn" class="unit-button">Liceu</button>
+                    <button id="dombosco-btn" class="unit-button">Dom Bosco</button>
+                </div>
+            </div>
+
+            <div id="name-input-section" class="step">
+                <h2>Ótimo! Agora, por favor, digite seu nome completo:</h2>
+                <form id="access-form">
+                    <input type="text" id="name-field" name="nome" placeholder="Seu nome aqui..." required>
+                    <button type="submit">Confirmar Presença</button>
+                </form>
+            </div>
+
+            <div id="success-message" class="step">
+                <h2>Acesso liberado, aproveite o evento!</h2>
+                <p>Sua presença foi confirmada com sucesso.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
