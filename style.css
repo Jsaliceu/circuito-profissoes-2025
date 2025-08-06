@@ -17,13 +17,21 @@ body {
     margin: 0;
     padding: 20px; /* Adiciona espaço nas bordas da tela */
     box-sizing: border-box;
+    /* ... suas outras propriedades ... */
+    background-color: #f0f2f5; /* Um cinza um pouco mais definido */
+    background-image: radial-gradient(#d7d7d7 0.5px, transparent 0.5px);
+    background-size: 15px 15px;
+}
+
+.unit-button i {
+    margin-right: 8px; /* Adiciona um espaço entre o ícone e o texto */
 }
 
 .container {
     background-color: var(--background-color);
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px var(--shadow-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 15px 35px rgba(0, 0, 0, 0.05);
     width: 90%;
     max-width: 500px;
     text-align: center;
@@ -32,6 +40,11 @@ body {
 
 header {
     text-align: center; /* Centraliza a logo e o título */
+    /* ... suas outras propriedades ... */
+    padding-bottom: 25px; /* Adiciona espaço abaixo do título */
+    margin-bottom: 25px; /* Adiciona espaço acima da instrução */
+    border-bottom: 1px solid #e9ecef; /* A linha divisória sutil */
+    
 }
 
 .logo {
@@ -44,7 +57,7 @@ header h1 {
     color: var(--primary-color);
     font-weight: 600;
     margin-top: 0; /* Remove margem extra caso a logo já dê espaço */
-    margin-bottom: 30px;
+    margin-bottom: 0;
     font-size: 1.8rem; /* Ajuste de tamanho para melhor encaixe */
 }
 
