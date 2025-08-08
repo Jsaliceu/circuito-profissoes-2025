@@ -1,5 +1,8 @@
+/* =============================================================== */
+/* --- ESTILOS DO CHECK-IN (SEU CÓDIGO ORIGINAL) --- */
+/* =============================================================== */
 :root {
-    --primary-color: #9c0000; /* Um azul profissional */
+    --primary-color: #9c0000;
     --secondary-color: #F7F9FC;
     --text-color: #333;
     --background-color: #FFFFFF;
@@ -15,17 +18,14 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 20px; /* Adiciona espaço nas bordas da tela */
+    padding: 20px;
     box-sizing: border-box;
-    /* ... suas outras propriedades ... */
-    background-color: #f0f2f5; /* Um cinza um pouco mais definido */
     background-image: radial-gradient(#d7d7d7 0.5px, transparent 0.5px);
     background-size: 15px 15px;
+    transition: background-color 0.5s ease;
 }
 
-.unit-button i {
-    margin-right: 8px; /* Adiciona um espaço entre o ícone e o texto */
-}
+.unit-button i { margin-right: 8px; }
 
 .container {
     background-color: var(--background-color);
@@ -39,80 +39,70 @@ body {
 }
 
 header {
-    text-align: center; /* Centraliza a logo e o título */
-    /* ... suas outras propriedades ... */
-    padding-bottom: 25px; /* Adiciona espaço abaixo do título */
-    margin-bottom: 25px; /* Adiciona espaço acima da instrução */
-    border-bottom: 1px solid #e9ecef; /* A linha divisória sutil */
-    
+    text-align: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e9ecef;
 }
 
-.logo {
-    max-width: 200px; /* Largura máxima da logo. Ajuste conforme necessário. */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: 10px; /* Espaço entre a logo e o título */
-}
-
+.logo { max-width: 200px; height: auto; margin-bottom: 10px; }
 header h1 {
     color: var(--primary-color);
     font-weight: 600;
-    margin-top: 0; /* Remove margem extra caso a logo já dê espaço */
+    margin-top: 0;
     margin-bottom: 0;
-    font-size: 1.8rem; /* Ajuste de tamanho para melhor encaixe */
+    font-size: 1.8rem;
 }
 
-.step {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
+.step { display: none; opacity: 0; transition: opacity 0.5s ease-in-out; }
+.step.active { display: block; opacity: 1; }
+.hidden { display: none !important; } /* Adicionado para compatibilidade */
 
-.step.active {
-    display: block;
-    opacity: 1;
-}
-
-h2 {
-    font-weight: 400;
-    margin-bottom: 25px;
-}
-
-.button-group {
-    display: flex;
-    gap: 15px; /* Reduz o espaço para melhor encaixe */
-    justify-content: center;
-    flex-wrap: wrap; /* Permite que os botões quebrem a linha */
-}
+h2 { font-weight: 400; margin-bottom: 25px; }
+.button-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
 
 .unit-button, button[type="submit"] {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 24px; /* Ajuste no padding para botões menores */
-    font-size: 15px; /* Ajuste no tamanho da fonte */
-    font-family: 'Poppins', sans-serif;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    flex-grow: 1; /* Permite que os botões cresçam para preencher o espaço */
-    min-width: 150px; /* Garante uma largura mínima */
+    background-color: var(--primary-color); color: white; border: none; padding: 12px 24px;
+    font-size: 15px; font-family: 'Poppins', sans-serif; border-radius: 8px; cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; flex-grow: 1; min-width: 150px;
 }
 
-.unit-button:hover, button[type="submit"]:hover {
-    background-color: #004170; /* Tom mais escuro do azul */
-    transform: translateY(-2px);
+.unit-button:hover, button[type="submit"]:hover { background-color: #6d0000; transform: translateY(-2px); }
+#name-field { width: 100%; padding: 15px; border: 1px solid #CCC; border-radius: 8px; font-size: 16px; box-sizing: border-box; margin-bottom: 20px; }
+#success-message h2 { color: #28a745; }
+
+/* =============================================================== */
+/* --- ESTILOS DO DASHBOARD (ISOLADOS) --- */
+/* =============================================================== */
+body.dashboard-active {
+    --bg-color: #1a1a2e;
+    --card-color: #24243e;
+    --primary-text: #e9e9f0;
+    --secondary-text: #a7a7c2;
+    --accent-color: #0F7173;
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    background-image: none; /* Remove a textura de pontos no modo dashboard */
 }
 
-#name-field {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #CCC;
-    border-radius: 8px;
-    font-size: 16px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
+#dashboard-section .container { max-width: 1200px; margin: 0 auto; background: none; box-shadow: none; padding: 0;}
+#dashboard-section header { text-align: center; margin-bottom: 40px; border-bottom: none; }
+#dashboard-section header h1 { margin: 0; color: var(--primary-text); }
+#dashboard-section header p { margin: 5px 0 0; color: var(--secondary-text); }
+#dashboard-section .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+#dashboard-section .card { background-color: var(--card-color); padding: 25px; border-radius: 12px; }
+#dashboard-section .card h2 { color: var(--primary-text); margin-top: 0; border-bottom: 1px solid var(--secondary-text); padding-bottom: 10px; font-size: 1.2rem; }
+#dashboard-section .total-card { text-align: center; }
+#dashboard-section #total-participants-value { font-size: 4rem; font-weight: 700; color: var(--accent-color); }
+#dashboard-section #live-feed-list { list-style: none; padding: 0; margin: 0; height: 250px; overflow-y: auto; color: var(--primary-text); }
+#dashboard-section #live-feed-list li { padding: 10px 0; border-bottom: 1px solid #3a3a5a; }
+#dashboard-section #live-feed-list li:last-child { border-bottom: none; }
+#dashboard-section #live-feed-list .feed-name { font-weight: 600; }
+#dashboard-section #live-feed-list .feed-time { font-size: 0.8rem; color: var(--secondary-text); float: right; }
 
-#success-message h2 {
-    color: #28a745; /* Verde para sucesso */
-}
+/* =============================================================== */
+/* --- ESTILOS DA INTEGRAÇÃO --- */
+/* =============================================================== */
+footer { position: fixed; bottom: 10px; right: 15px; font-size: 0.8rem; z-index: 100; }
+footer a { color: #888; text-decoration: none; transition: color 0.3s; }
+body.dashboard-active footer a { color: var(--secondary-text); }
