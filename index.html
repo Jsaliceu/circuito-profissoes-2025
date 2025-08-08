@@ -12,39 +12,45 @@
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <img src="logosale.png" alt="Logo da Empresa" class="logo">
-            <h1>Circuito de Profissões 2025</h1>
-        </header>
-
-        <main id="main-content">
-            <div id="unit-selection" class="step active">
-                <h2>Para começar, selecione a sua categoria:</h2>
-                <div class="button-group">
-                    <button class="unit-button"><i class="fa-solid fa-graduation-cap"></i> Liceu</button>
-                    <button class="unit-button"><i class="fa-solid fa-school"></i> Dom Bosco</button>
-                    <button class="unit-button"><i class="fa-solid fa-people-group"></i> Escola convidada</button>
-                    <button class="unit-button"><i class="fa-solid fa-user-tie"></i> Responsável</button>
+    <div id="checkin-section">
+        <div class="container">
+            <header>
+                <img src="logosale.png" alt="Logo da Empresa" class="logo">
+                <h1>Circuito de Profissões 2025</h1>
+            </header>
+            <main id="main-content">
+                <div id="unit-selection" class="step active">
+                    <h2>Para começar, selecione a sua categoria:</h2>
+                    <div class="button-group">
+                        <button class="unit-button"><i class="fa-solid fa-graduation-cap"></i> Liceu</button>
+                        <button class="unit-button"><i class="fa-solid fa-school"></i> Dom Bosco</button>
+                        <button class="unit-button"><i class="fa-solid fa-people-group"></i> Escola convidada</button>
+                        <button class="unit-button"><i class="fa-solid fa-user-tie"></i> Responsável</button>
+                    </div>
                 </div>
-            </div>
-
-            <div id="name-input-section" class="step">
-                <h2>Ótimo! Agora, por favor, digite seu nome completo:</h2>
-                <form id="access-form">
-                    <input type="text" id="name-field" name="nome" placeholder="Seu nome aqui..." required>
-                    <button type="submit">Confirmar Presença</button>
-                </form>
-            </div>
-
-            <div id="success-message" class="step">
-                <h2>Acesso liberado, aproveite o evento!</h2>
-                <p>Sua presença foi confirmada com sucesso.</p>
-            </div>
-        </main>
+                <div id="name-input-section" class="step">
+                    <h2>Ótimo! Agora, por favor, digite seu nome completo:</h2>
+                    <form id="access-form">
+                        <input type="text" id="name-field" name="nome" placeholder="Seu nome aqui..." required>
+                        <button type="submit">Confirmar Presença</button>
+                    </form>
+                </div>
+                <div id="success-message" class="step">
+                    <h2>Acesso liberado, aproveite o evento!</h2>
+                    <p>Sua presença foi confirmada com sucesso.</p>
+                </div>
+            </main>
+        </div>
     </div>
 
+    <div id="dashboard-section" class="hidden">
+        </div>
+
+    <footer id="main-footer">
+        <a href="#" id="admin-login-btn">Acesso Restrito</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
